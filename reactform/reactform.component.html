@@ -1,0 +1,37 @@
+<div class="registration_form">
+    <form [formGroup]="registrationForm" (ngSubmit)="postdata()">
+        <h3 style="color:red"> User Registration Form</h3>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="firstname" [class.is-invaild]="registrationForm.get('firstname').touched && registrationForm.get('firstname')"  placeholder="Enter your firstname">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="lastname" [class.is-invaild]="registrationForm.get('lastname').touched && registrationForm.get('lastname')"  placeholder="Enter your lastname">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="eamil" [class.is-invaild]="registrationForm.get('eamil').touched && registrationForm.get('eamil')"  placeholder="Enter your email">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="password" placeholder="Enter password">
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="mobile" placeholder="Enter your mobile number" >
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="age" placeholder="Enter your age" >
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="gender" placeholder="Enter your gender" >
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" formControlName="dob" placeholder="Enter your Date of birth" >
+        </div>
+
+        <button class="btn btn-primary"> Register</button>
+        <button class=" btn btn-danger" style="margin-left: 5px;"> Display</button>
+        
+    </form>
+</div>
+
+<!-- <div style="color:red;text-align: center;" class="mt-5">
+    {{ registrationForm.value | json}}
+</div> -->

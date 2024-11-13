@@ -1,0 +1,19 @@
+<h3 style="color:red;text-align: center;font-weight:bold;margin-block-start:10px;"> User Registration Form </h3>
+<div class="container mt-4">
+<form #userForm="ngForm" (ngSubmit)="userdata(userForm)">
+    <div class="row">
+        <div class="col-6">
+            
+            <div class="mb-3">
+                Email Id<input type="text" class="form-control" ngModel #eamilip="ngModel" [class.is-invalid]="eamilip.invalid && eamilip.touched" required name="eamil" placeholder="Enter Email Id">
+            </div>
+            <div class="mb-3">
+                Password<input type="text" class="form-control" ngModel #passwordip="ngModel" [class.is-invalid]="passwordip.invalid && passwordip.touched" required name="password" placeholder="Enter Password">
+            </div>
+            
+            <button class="btn btn-primary"> Login </button>
+        </div>
+    </div>
+</form>
+</div>
+<!-- <div>{{userForm.value | json}}</div> -->

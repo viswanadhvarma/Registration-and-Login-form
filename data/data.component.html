@@ -1,0 +1,29 @@
+<table >
+    <tr>
+        <th scope="col">firstname</th>
+        <th scope="col">lastname</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Dob</th>
+          
+    </tr>
+    
+    <tr *ngFor="let name of data">
+            <td>{{name.firstname}}</td>
+            <td>{{name.lastname}}</td>
+            <td>{{name.eamil}}</td>
+            <td>{{name.password}}</td>
+            <td>{{name.mobile}}</td>
+            <td>{{name.age}}</td>
+            <td>{{name.gender}}</td>
+            <td>{{name.dob}}</td>
+            <td><button routerLink="/modify" (click)="change(name.eamil)">Edit</button></td>
+            <td><button (click)="deletedata(name.eamil)">delete</button></td><hr>
+            
+            
+    </tr>
+    
+</table>
